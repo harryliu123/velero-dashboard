@@ -3,6 +3,12 @@ kind: Namespace
 metadata:
   name: velero
 ---
+apiVersion: v1
+kind: serviceaccount
+metadata:
+  name: velero
+  namespace: velero
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
