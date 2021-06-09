@@ -8,13 +8,13 @@ RUN apk update && \
     apk add npm && \
     npm install -g uglifycss uglify-es && \
     chown -R root: * && \
-    find ./oauth2/static/js/ -type f \
+    find ./velero/static/js/ -type f \
         -name "*.js" ! -name "*.min.*" ! -name "vfs_fonts*" \
         -exec echo {} \; \
         -exec uglifyjs -c -o {}.min {} \; \
         -exec rm {} \; \
         -exec mv {}.min {} \; && \
-    find ./oauth2/static/css/ -type f \
+    find ./velero/static/css/ -type f \
         -name "*.css" ! -name "*.min.*" \
         -exec echo {} \; \
         -exec uglifycss --output {}.min {} \; \
