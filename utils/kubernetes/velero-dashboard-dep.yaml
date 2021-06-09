@@ -18,7 +18,7 @@ spec:
       serviceAccount: velero
       containers:
         - name: velero-dashboard
-          image: klinux/velero-dashboard:latest
+          image: harryliu123/velero-dashboard:v0.1
           imagePullPolicy: IfNotPresent
           env:
             - name: DEBUG
